@@ -1,4 +1,7 @@
-greenlet==2.0.2
-psycopg2==2.9.6
-SQLAlchemy==2.0.10
-typing_extensions==4.5.0
+greenlet
+psycopg2
+SQLAlchemy
+typing_extensions
+altair
+streamlit
+vega_datasets
