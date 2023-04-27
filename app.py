@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 from database import query_db
 from plotting import plot_wells
@@ -11,7 +12,7 @@ def app():
     gradient = st.number_input('Min gradient', 0., 0.1, value=0.01, step=0.005, format='%0.3f')
     
     data = query_db(depth, gradient)
-    st.write(f'Data size: {len(data)}')
+    st.write(pd.DataFrame(data))
     st.write(plot_wells(data))
 
 if __name__ == '__main__':
